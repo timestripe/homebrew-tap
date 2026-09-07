@@ -5,13 +5,13 @@
 class TimestripeCli < Formula
   desc "Command-line interface for Timestripe."
   homepage "https://github.com/timestripe/timestripe-cli"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/timestripe/timestripe-cli/releases/download/v0.3.0/timestripe_0.3.0_macOS_x86_64.tar.gz"
-      sha256 "99d85fcb07df6d989da866262ffa522577b8ba8c83a1ee7d15195e16a6e1c8be"
+      url "https://github.com/timestripe/timestripe-cli/releases/download/v0.4.0/timestripe_0.4.0_macOS_x86_64.tar.gz"
+      sha256 "814e8a5c9f84031b172228365c3e3aeb9bcc927e5ac97d564b1f3531bfde94c5"
 
       define_method(:install) do
         bin.install "timestripe"
@@ -19,8 +19,8 @@ class TimestripeCli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/timestripe/timestripe-cli/releases/download/v0.3.0/timestripe_0.3.0_macOS_arm64.tar.gz"
-      sha256 "c5200e9004aa2fe6dd00ca2b6eddefe1a194b45df601fd60d02eaa3596128b54"
+      url "https://github.com/timestripe/timestripe-cli/releases/download/v0.4.0/timestripe_0.4.0_macOS_arm64.tar.gz"
+      sha256 "c322ec29b880b5b439b54716b1e0e5424efaad778ffd7cb4bc1e3371a64ff9d5"
 
       define_method(:install) do
         bin.install "timestripe"
@@ -31,16 +31,16 @@ class TimestripeCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/timestripe/timestripe-cli/releases/download/v0.3.0/timestripe_0.3.0_linux_x86_64.tar.gz"
-      sha256 "ac39fb9fc7cc3abc638e4002f55a25bbf8256f033dfb0309ab6fa6b995276876"
+      url "https://github.com/timestripe/timestripe-cli/releases/download/v0.4.0/timestripe_0.4.0_linux_x86_64.tar.gz"
+      sha256 "574bc869f5242b67126a92dbbe7731ed6af51de15ebe0d28954efdd1c999f2c5"
       define_method(:install) do
         bin.install "timestripe"
         generate_completions_from_executable(bin/"timestripe", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/timestripe/timestripe-cli/releases/download/v0.3.0/timestripe_0.3.0_linux_arm64.tar.gz"
-      sha256 "e55d3b60019024d8137e47260d8085b495ab4b4bb9a359564c7d440ddff8dbe5"
+      url "https://github.com/timestripe/timestripe-cli/releases/download/v0.4.0/timestripe_0.4.0_linux_arm64.tar.gz"
+      sha256 "f5e7e34179b0b1930b41b1b91489c79e97c1fafedd2767298478b8afac32b9ca"
       define_method(:install) do
         bin.install "timestripe"
         generate_completions_from_executable(bin/"timestripe", "completion")
